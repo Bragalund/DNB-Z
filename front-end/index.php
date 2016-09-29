@@ -12,7 +12,7 @@
     <!-- Import stylesheets -->
     <link href="assets/common/css/stylesheet.css" rel="stylesheet">
 </head>
-    
+
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
+
                 <a class="navbar-brand" href="#">Project name</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -77,6 +77,6 @@
 
     <!-- Import JavaScript -->
     <script src="assets/lib/jquery-1.11.3/jquery-1.11.3.min.js"></script>
-    <script src="assets/lib/bootstrap-3.3.6/js/bootstrap.js"></script>
+    <script src="assets/lib/bootstrap-3.3.7.js/bootstrap.js"></script>
 </body>
 </html>

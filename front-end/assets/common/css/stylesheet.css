@@ -3,7 +3,7 @@
  * IMPORT EXTERNAL CSS
  * ======================================================
  */
-@import "../../lib/bootstrap-3.3.6/css/bootstrap.css";
+@import "../../lib/bootstrap-3.3.7/css/bootstrap.css";
 @import "../../lib/font-awesome-4.5.0/css/font-awesome.css";
 
 
@@ -13,6 +13,6 @@
  * ======================================================
  */
 
- body {
+body {
     margin-top: 50px;
- }
+}
