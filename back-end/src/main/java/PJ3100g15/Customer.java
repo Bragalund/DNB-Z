@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class Customer extends User {
     private ArrayList<Account> accounts;
 
-    public Customer(){
+    public Customer(String id, String firstName, String lastName, String addressLine1, String addressLine2, int postalCode, String eMailAddress, int phoneNumber){
+        super(id, firstName, lastName, addressLine1, addressLine2, postalCode, eMailAddress, phoneNumber);
         accounts = new ArrayList<Account>();
     }
 

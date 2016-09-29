@@ -23,6 +23,13 @@ public class Account {
         oere = 0;
     }
 
+    /**
+     * Add amount to account balance.
+     *
+     * @param kroner
+     * @param oere
+     * @return
+     */
     public boolean addAmount(int kroner, int oere){
         if ((kroner < 0 || oere < 0) || (kroner == 0 && oere == 0)) return false;
 
@@ -35,6 +42,13 @@ public class Account {
         return true;
     }
 
+    /**
+     * Subtract amount from account balance.
+     *
+     * @param kroner
+     * @param oere
+     * @return
+     */
     public boolean subtractAmount(int kroner, int oere){ // TODO exception handling
         if ((kroner < 0 || oere < 0) || (kroner == 0 && oere == 0)) return false;
 
