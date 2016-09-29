@@ -76,7 +76,7 @@
 
 
     <!-- Import JavaScript -->
-    <script src="assets/lib/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+    <script src="assets/lib/jquery-3.1.1/jquery-3.1.1.min.js"></script>
     <script src="assets/lib/bootstrap-3.3.7.js/bootstrap.js"></script>
 </body>
 </html>
