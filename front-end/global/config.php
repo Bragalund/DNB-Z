@@ -19,7 +19,7 @@ else {
 
 $conf['domain'] = "";
 $conf['hostname'] = $_SERVER['HTTP_HOST'];
-//$conf['localhost'] = (($conf['hostname'] == "localhost")? true : false);
+$conf['localhost'] = (($conf['hostname'] == "localhost")? true : false);
 $conf['localhost'] = false;
 
 $conf['pathToRoot'] = "./";
@@ -29,7 +29,7 @@ $conf['pathToRoot'] = "./";
 require_once ('class/Validate.php');
 require_once ('class/Mysqli.php');
 require_once ('class/Custom.php');
-//require_once ('opendb.php');
+require_once ('opendb.php');
 require_once ('pages.php');
 
 $customClass = Custom::init();

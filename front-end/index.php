@@ -1,6 +1,7 @@
 <?php
     require_once("global/config.php");
     $visitorIP = $customClass->getUserIP();
+    $customClass->makeLog();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="Gruppe 15">
 
-    <title>DNB Z</title>
+    <title><?=$conf['sitename']?></title>
 
     <!-- Import stylesheets -->
     <link href="assets/common/css/stylesheet.css" rel="stylesheet">
