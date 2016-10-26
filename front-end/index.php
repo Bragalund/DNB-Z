@@ -2,6 +2,8 @@
     require_once("global/config.php");
     $visitorIP = $customClass->getUserIP();
     $customClass->makeLog();
+
+    require_once "";
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,12 +1,12 @@
 <?php
 $navLeft = array(
-	'Meny 1'                   => $conf['pages']['menu1'],
-	'Meny 2'                   => $conf['pages']['menu2']
+	'Meny 1' => $conf['pages']['menu1'],
+	'Meny 2' => $conf['pages']['menu2']
 );
 
 $navRight = array(
-	'Meny 3'                   => $conf['pages']['menu3'],
-	'Meny 4'                   => $conf['pages']['menu4']
+	'Meny 3' => $conf['pages']['menu3'],
+	'Meny 4' => $conf['pages']['menu4']
 );
 ?>
 

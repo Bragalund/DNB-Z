@@ -17,8 +17,8 @@ else {
 	$conf['json'] = false;
 }
 
-$conf['domain'] = "";
-$conf['hostname'] = $_SERVER['HTTP_HOST'];
+$conf['domain']    = "";
+$conf['hostname']  = $_SERVER['HTTP_HOST'];
 $conf['localhost'] = (($conf['hostname'] == "localhost")? true : false);
 $conf['localhost'] = false;
 
