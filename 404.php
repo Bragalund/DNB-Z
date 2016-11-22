@@ -12,7 +12,7 @@
     <!-- Import stylesheets -->
     <link href="assets/common/css/stylesheet.css" rel="stylesheet">
 </head>
-<body>
+<body id="error">
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
           <div class="cover-container">
