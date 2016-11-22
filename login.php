@@ -24,23 +24,14 @@
                 <div class="col-md-2 col-sm-3 col-xs-4">
                     <img src="assets/common/img/logo-z.png" class="img-responsive brand">
                 </div>
-
-                <div class="col-md-3 col-sm-4 col-sm-offset-5 col-md-offset-7 hidden-xs">
-                    <img class="img-responsive" src="assets/common/img/logo.png" />
-                </div>
             </div>
         </div>
     </header>
 
-    <?php
-        require_once("assets/common/inc/navbar.php");
-    ?>
 
 
-        <footer>
-            <p>&copy; PJ3100 Gruppe 15 - høsten 2016, vår 2017<br>
-            <?=$visitorIP?></p>
-        </footer>
+
+        
     </div><!-- /container -->
 
 
