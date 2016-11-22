@@ -1,5 +1,8 @@
 <?php
 
+ob_start();
+session_start();
+
 if(!defined("CONFIG")){
 	header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
 	exit("Not Found");
@@ -21,3 +24,9 @@ else {
 	header($_SERVER['SERVER_PROTOCOL']." 500 Internal Error");
 	exit("Missing database connection");
 }
+
+/*if( !isset($_SESSION['user']) ) {
+	header("Location: home.php");
+	exit;
+}
+*/
