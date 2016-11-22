@@ -2,27 +2,20 @@
     require_once("global/config.php");
     $visitorIP = $customClass->getUserIP();
     $customClass->makeLog();
+
+	ob_start();
+	session_start();
+
+	// if session is not set this will redirect to login page
+	/*if( !isset($_SESSION['user']) ) {
+		header("Location: login.php");
+	exit;
+	}*/
+	
+	require_once("assets/common/inc/head.php");
+	require_once("assets/common/inc/header.php");
+	require_once("assets/common/inc/navbar.php");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Gruppe 15">
-
-    <title><?=$conf['sitename']?></title>
-
-    <!-- Import stylesheets -->
-    <link href="assets/common/css/stylesheet.css" rel="stylesheet">
-</head>
-<body>
-
-    <?php
-        require_once("assets/common/inc/header.php");
-        require_once("assets/common/inc/navbar.php");
-    ?>
 
     <div class="container">
         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -75,7 +68,7 @@
                     <div class="panel-body">
 
                         <?php
-                            $jsondata = file_get_contents("http://10.32.14.31:8080/customers");
+                            $jsondata = file_get_contents("http://10.32.13.28:8080/customers");
                             $json = json_decode($jsondata, true);
                             echo "<ul>";
                             foreach($json as $row) {
