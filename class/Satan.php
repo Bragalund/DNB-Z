@@ -39,6 +39,8 @@ class Satan{
 	public function getUser($identification){
 		$data = $this->getData("customers", $identification);
 
+		//if contains user not found return error.
+
 		return $data;
 	}
 }
