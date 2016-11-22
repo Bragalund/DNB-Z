@@ -107,18 +107,15 @@
 
         <hr>
 
-        <footer>
-            <p>&copy; PJ3100 Gruppe 15 - høsten 2016, vår 2017<br>
-            <?=$visitorIP?></p>
-        </footer>
+        <?php
+			include_once("assets/common/inc/footer.php");
+		?>
     </div><!-- /container -->
 
 
-    <!-- Import JavaScript -->
-    <script src="assets/lib/jquery-3.1.1/jquery-3.1.1.min.js"></script>
-    <script src="assets/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
-    <script src="assets/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
-    <script src="assets/lib/chartjs-2.3.0/Chart.js"></script>
+    <?php
+		include_once("assets/common/inc/scripts.php");
+	?>
 
     <script>
         var ctx = document.getElementById("myChart");
