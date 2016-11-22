@@ -3,11 +3,7 @@
 	$visitorIP = $customClass->getUserIP();
 	$customClass->makeLog();
 
-	ob_start();
-	session_start();
-
-	$jsondata = file_get_contents("http://10.32.13.28:8080/customers");
-	$json = json_decode($jsondata, true);
+	$userCheck = $satan->getUsers();
 
 	// it will never let you open index(login) page if session is set
 	if ( isset($_SESSION['user'])!="" ) {
@@ -54,14 +50,14 @@
 				return null;
 			}
 
-			$result = validateIdentification($user, $json);
+			$result = validateIdentification($user, $userCheck);
 
 			if(!empty($result)){
 				$_SESSION['user'] = $result;
 				header("Location: index.php");
 			}
 			else {
-				$errMSG = "Brukerkontoen er enten tastet inn feil eller finnes ikke.";
+				$errorMessage = "Brukerkontoen er enten tastet inn feil eller finnes ikke.";
 			}
 
 			/*$password = hash('md5', $pass); // password hashing using SHA256*/
@@ -80,11 +76,11 @@
 				<form method="post" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
 
 					<?php
-						if (isset($errMSG)) {
+						if (isset($errorMessage)) {
 					?>
 					<div class="form-group">
 						<div class="alert alert-danger">
-							<b>Feilmelding!</b> <?=$errMSG?>
+							<b>Feilmelding!</b> <?=$errorMessage?>
 						</div>
 					</div>
 					<?php
