@@ -19,6 +19,7 @@ body {
     background-color: #f9f9f9;
 	color: #202020;
 	font-family: Source Sans Pro;
+	font-size: 16px;
 }
 
 header {
@@ -62,7 +63,6 @@ img.brand {
 }
 
 .navbar-custom {
-    font-size: 14px;
     background-color: rgba(0, 115, 112, 1);
     border-width: 0px;
     border-radius: 0px;
