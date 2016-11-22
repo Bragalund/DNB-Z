@@ -31,27 +31,27 @@
     <?php
         require_once("assets/common/inc/navbar.php");
     ?>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-sm-offset-4">
-          <form class="" action="" method="post">
-            <div class="form-group">
-            	<label for="user">Personnummer</label>
-            	<input type="text" class="form-control" id="user" placeholder="Skriv inn personnummer, 11 tall." value="<?=$user?>">
-            	<!--<span class="text-danger"><?=$userError?></span>-->
-            </div>
-
-            <div class="form-group">
-            	<label for="password">Passord</label>
-            	<input type="password" class="form-control" id="password" placeholder="Skriv inn passord.">
-            	<!--<span class="text-danger"><?=$passError?></span>-->
-            </div>
-          </form>
-        </div>
-      </div>
-    </div><!-- /container -->
-
+    <div class="jumbotron bg-green">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-4">
+            <h2 class="text-center">Logg inn i nettbanken</h2>
+            <form class="" action="" method="post">
+              <div class="form-group">
+                <label for="user">Personnummer</label>
+                <input type="text" class="form-control" id="user" placeholder="Skriv inn personnummer, 11 tall." value="<?=$user?>">
+                <!--<span class="text-danger"><?=$userError?></span>-->
+              </div>
+              <div class="form-group">
+                <label for="password">Passord</label>
+                <input type="password" class="form-control" id="password" placeholder="Skriv inn passord.">
+                <!--<span class="text-danger"><?=$passError?></span>-->
+              </div>
+            </form><!-- /form -->
+          </div>
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </div><!-- /jumbotron -->
 
     <!-- Import JavaScript -->
     <script src="assets/lib/jquery-3.1.1/jquery-3.1.1.min.js"></script>
