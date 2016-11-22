@@ -2,6 +2,15 @@
     require_once("global/config.php");
     $visitorIP = $customClass->getUserIP();
     $customClass->makeLog();
+
+	ob_start();
+	session_start();
+
+	// if session is not set this will redirect to login page
+	if( !isset($_SESSION['user']) ) {
+		header("Location: login.php");
+	exit;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +103,7 @@
                     <div class="panel-body">
 
                         <?php
-                            $jsondata = file_get_contents("http://10.32.14.31:8080/customers");
+                            $jsondata = file_get_contents("http://10.32.13.28:8080/customers");
                             $json = json_decode($jsondata, true);
                             echo "<ul>";
                             foreach($json as $row) {
