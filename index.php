@@ -7,11 +7,11 @@
 	session_start();
 
 	// if session is not set this will redirect to login page
-	/*if( !isset($_SESSION['user']) ) {
+	if( !isset($_SESSION['user']) ) {
 		header("Location: login.php");
 	exit;
-	}*/
-	
+	}
+
 	require_once("assets/common/inc/head.php");
 	require_once("assets/common/inc/header.php");
 	require_once("assets/common/inc/navbar.php");

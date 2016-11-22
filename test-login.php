@@ -57,15 +57,8 @@ if( isset($_POST['btn-login']) ) {
 			$errMSG = "Brukerkontoen er enten tastet inn feil eller finnes ikke.";
 		}
 
-		/*echo "<ul>";
-		foreach($json as $row) {
-			echo "<li>".$row['firstName']."</li>";
-		}
-		echo "</ul>";*/
-
 		/*$password = hash('md5', $pass); // password hashing using SHA256*/
 	}
-
 }
 ?>
 <?php
