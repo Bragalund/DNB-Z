@@ -9,6 +9,8 @@
 	exit;
 	}
 
+	$logged = $satan->getUser($_SESSION['user']);
+
 	require_once("assets/common/inc/head.php");
 	require_once("assets/common/inc/header.php");
 	require_once("assets/common/inc/navbar.php");
@@ -64,13 +66,15 @@
                     </div>
                     <div class="panel-body">
 
+						<h1>Velkommen, <?=$logged['firstName']?>!</h1>
+
                         <?php
-							$users = $satan->getUsers();
+							/*$result = $satan->getUsers();
 							echo "<ul>";
-							foreach($users as $row) {
+							foreach($result as $row) {
 								echo "<li>".$row['firstName']."</li>";
 							}
-							echo "</ul>";
+							echo "</ul>";*/
                         ?>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

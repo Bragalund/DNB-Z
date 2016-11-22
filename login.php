@@ -3,8 +3,6 @@
 	$visitorIP = $customClass->getUserIP();
 	$customClass->makeLog();
 
-	$userCheck = $satan->getUsers();
-
 	// it will never let you open index(login) page if session is set
 	if ( isset($_SESSION['user'])!="" ) {
 		header("Location: index.php");
@@ -18,7 +16,7 @@
 
 	if( isset($_POST['btn-login']) ) {
 
-		// prevent sql injections/ clear user invalid inputs
+		// prevent injections/ clear user invalid inputs
 		$user = trim($_POST['user']);
 		$user = strip_tags($user);
 		$user = htmlspecialchars($user);
@@ -26,7 +24,7 @@
 		$pass = trim($_POST['password']);
 		$pass = strip_tags($pass);
 		$pass = htmlspecialchars($pass);
-		// prevent sql injections / clear user invalid inputs
+		// prevent injections / clear user invalid inputs
 
 		if(empty($user)){
 			$error = true;
@@ -40,6 +38,8 @@
 
 		// if there's no error, continue to login
 		if (!$error) {
+
+			$userCheck = $satan->getUsers();
 
 			function validateIdentification($data, $array) {
 				foreach ($array as $key => $val) {

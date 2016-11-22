@@ -2,7 +2,7 @@
 class Satan{
 
     private static $instance;
-	private static $server = "http://tollerud.no/annet/pj3100/";
+	private static $server = "http://188.166.68.117:8080/";
 
     public static function init(){
         if(self::$instance == NULL){
@@ -16,16 +16,28 @@ class Satan{
 
     }
 
-	private function getJson($type){
-		$data = self::$server . $type;
-		$jsondata = file_get_contents($data);
-		$json = json_decode($jsondata, true);
+	private function getData($type, $identification){
+		if(!empty($identification)){
+			$data = self::$server . $type . '/' . $identification;
+		}
+		else {
+			$data = self::$server . $type;
+		}
 
-		return $json;
+		$data = file_get_contents($data);
+		$data = json_decode($data, true);
+
+		return $data;
 	}
 
 	public function getUsers(){
-		$data = $this->getJson("customers");
+		$data = $this->getData("customers", NULL);
+
+		return $data;
+	}
+
+	public function getUser($identification){
+		$data = $this->getData("customers", $identification);
 
 		return $data;
 	}
