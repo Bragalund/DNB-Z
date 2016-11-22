@@ -28,10 +28,47 @@
         </div>
     </header>
 
+    <nav class="navbar navbar-default navbar-custom" role="navigation">
+      <div class="container">
+        <div class="container fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span></span>
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+
+
+    </main>
+
+
+
+
+
     </div><!-- /container -->
 
 
