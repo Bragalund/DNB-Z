@@ -84,7 +84,7 @@
 					?>
 					<div class="form-group">
 						<div class="alert alert-danger">
-							<span class="glyphicon glyphicon-info-sign"></span> <?=$errMSG?>
+							<b>Feilmelding!</b> <?=$errMSG?>
 						</div>
 					</div>
 					<?php

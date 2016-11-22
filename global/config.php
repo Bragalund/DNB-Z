@@ -29,9 +29,11 @@ $conf['pathToRoot'] = "./";
 require_once ('class/Validate.php');
 require_once ('class/Mysqli.php');
 require_once ('class/Custom.php');
+require_once ('class/Satan.php');
 require_once ('opendb.php');
 require_once ('pages.php');
 
 $customClass = Custom::init();
+$satan = Satan::init();
 
 $conf['sitename'] = "DNB Z";
