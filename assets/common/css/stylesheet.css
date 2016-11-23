@@ -531,8 +531,7 @@ a.list-group-item:focus {
   * Base structure
   */
 
- #error html,
- body {
+ #error body {
    height: 100%;
    background-color: #007272;
    text-align: center;
