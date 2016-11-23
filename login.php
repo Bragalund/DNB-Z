@@ -10,8 +10,6 @@
 	}
 
 	$error = false;
-	$userError = "";
-	$passError = "";
 	$user = "";
 
 	if( isset($_POST['btn-login']) ) {
@@ -28,12 +26,12 @@
 
 		if(empty($user)){
 			$error = true;
-			$userError = "Du må skrive inn personnummer.";
+			$errorMessage = "Du må skrive inn personnummer.";
 		}
 
 		if(empty($pass)){
 			$error = true;
-			$passError = "Du må skrive inn passord.";
+			$errorMessage = "Du må skrive inn passord.";
 		}
 
 		// if there's no error, continue to login
@@ -90,12 +88,10 @@
 					<div class="form-group">
 						<label for="user">Personnummer</label>
 						<input type="text" class="form-control" id="user" name="user" placeholder="Skriv inn personnummer, 11 tall." value="<?=$user?>">
-						<span class="text-danger"><?=$userError?></span>
 					</div>
 					<div class="form-group">
 						<label for="password">Passord</label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="Skriv inn passord.">
-						<span class="text-danger"><?=$passError?></span>
 					</div>
 					<div class="form-group">
 						<button class="btn btn-primary" type="submit" name="btn-login">Logg inn</button>
