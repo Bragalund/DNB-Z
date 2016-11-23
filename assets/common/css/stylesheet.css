@@ -565,7 +565,7 @@ a.list-group-item:focus {
    padding: 0 20px;
  }
 
-#error h1, p, h3 {
+#error h1, #error p, #error h3 {
   color: #ffffff;
   text-align: center;
 }
