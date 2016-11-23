@@ -3,10 +3,10 @@ require_once("global/config.php");
 $visitorIP = $customClass->getUserIP();
 $customClass->makeLog();
 
-/*if( !isset($_SESSION['user']) ) {
+if( !isset($_SESSION['user']) ) {
 header("Location: login.php");
 exit;
-}*/
+}
 
 require_once("assets/common/inc/head.php");
 require_once("assets/common/inc/header.php");
