@@ -103,3 +103,5 @@ require_once("assets/common/inc/navbar.php");
 <?php
 include_once("assets/common/inc/scripts.php");
 ?>
+</body>
+</html>
