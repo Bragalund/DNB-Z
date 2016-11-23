@@ -1,5 +1,9 @@
 <?php
-require_once("assets/common/inc/head.php");
+require_once("global/config.php");
+if($_GET["type"] != 404 && $_GET["type"] != 401){
+	header("Location: index.php");
+	die();
+}
 
 $codes = array(
 	404 => array('404', 'Page not found', 'The page you were looking for doesnt exist or another error occured.'),
@@ -9,10 +13,7 @@ $code = $codes[$_GET["type"]][0];
 $title = $codes[$_GET["type"]][1];
 $message = $codes[$_GET["type"]][2];
 
-/**if ($title == false || strlen($status) != 3){
-	$message = 'Please supply a valid HTTP status code.';
-}**/
-
+require_once("assets/common/inc/head.php");
 ?>
 <body id="error" class="bg-vipps">
 	<div class="site-wrapper">
