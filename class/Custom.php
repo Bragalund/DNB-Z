@@ -76,9 +76,5 @@ class Custom extends Satan{
 		 */
 
 		return number_format($n, 0,'.', ' ') . ',-';
-
-		//return sprintf('%0.2f', $value) . ",-";
-		//return money_format('%+n', $value) . "\n";
-		//return money_format('%.2n', $value) . "\n";
 	}
 }
