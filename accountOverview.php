@@ -94,6 +94,10 @@ require_once("assets/common/inc/navbar.php");
 			</div><!-- /panel -->
 		</div><!-- /col -->
 	</div><!-- /row -->
+
+	<?php
+		include_once("assets/common/inc/footer.php");
+	?>
 </div><!-- /container -->
 
 <?php
