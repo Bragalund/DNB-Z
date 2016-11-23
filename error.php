@@ -1,18 +1,17 @@
 <?php
 require_once("assets/common/inc/head.php");
 
-$status = $_SERVER['REDIRECT_STATUS'];
 $codes = array(
-	404 => array('404', 'Page not found', 'The page you were looking for doesnt exist or another error occured.')
+	404 => array('404', 'Page not found', 'The page you were looking for doesnt exist or another error occured.'),
 	401 => array('401', 'Unauthorized', 'Access is denied due to invalid credentials.')
 );
-$code = $codes[$status][0];
-$title = $codes[$status][1];
-$message = $codes[$status][2];
+$code = $codes[$_GET["type"]][0];
+$title = $codes[$_GET["type"]][1];
+$message = $codes[$_GET["type"]][2];
 
-if ($title == false || strlen($status) != 3){
-	$message = 'Please supply a valid HTTP status code.'
-}
+/**if ($title == false || strlen($status) != 3){
+	$message = 'Please supply a valid HTTP status code.';
+}**/
 
 ?>
 <body id="error">
