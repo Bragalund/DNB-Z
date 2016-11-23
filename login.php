@@ -66,11 +66,11 @@
 	require_once("assets/common/inc/header.php");
 	require_once("assets/common/inc/navbar.php");
 ?>
-<div class="jumbotron bg-green">
+<div class="jumbotron bg-vipps">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-4">
-				<h2 class="text-center">Logg inn i nettbanken</h2>
+				<h2 class="text-center text-white">Logg inn i nettbanken</h2>
 				<form method="post" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
 
 					<?php
@@ -86,11 +86,11 @@
 					?>
 
 					<div class="form-group">
-						<label for="user">Personnummer</label>
+						<label for="user" class="text-white">Personnummer</label>
 						<input type="text" class="form-control" id="user" name="user" placeholder="Skriv inn personnummer, 11 tall." value="<?=$user?>">
 					</div>
 					<div class="form-group">
-						<label for="password">Passord</label>
+						<label for="password" class="text-white">Passord</label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="Skriv inn passord.">
 					</div>
 					<div class="form-group">
