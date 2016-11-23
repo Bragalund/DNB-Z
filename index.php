@@ -3,14 +3,13 @@
     $visitorIP = $customClass->getUserIP();
     $customClass->makeLog();
 
-	ob_start();
-	session_start();
-
 	// if session is not set this will redirect to login page
 	if( !isset($_SESSION['user']) ) {
 		header("Location: login.php");
 	exit;
 	}
+
+	$logged = $satan->getUser($_SESSION['user']);
 
 	require_once("assets/common/inc/head.php");
 	require_once("assets/common/inc/header.php");
@@ -67,14 +66,15 @@
                     </div>
                     <div class="panel-body">
 
+						<h1>Velkommen, <?=$logged['firstName']?>!</h1>
+
                         <?php
-                            $jsondata = file_get_contents("http://10.32.13.28:8080/customers");
-                            $json = json_decode($jsondata, true);
-                            echo "<ul>";
-                            foreach($json as $row) {
-                                echo "<li>".$row['firstName']."</li>";
-                            }
-                            echo "</ul>";
+							/*$result = $satan->getUsers();
+							echo "<ul>";
+							foreach($result as $row) {
+								echo "<li>".$row['firstName']."</li>";
+							}
+							echo "</ul>";*/
                         ?>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -107,18 +107,14 @@
 
         <hr>
 
-        <footer>
-            <p>&copy; PJ3100 Gruppe 15 - høsten 2016, vår 2017<br>
-            <?=$visitorIP?></p>
-        </footer>
+        <?php
+			include_once("assets/common/inc/footer.php");
+		?>
     </div><!-- /container -->
 
-
-    <!-- Import JavaScript -->
-    <script src="assets/lib/jquery-3.1.1/jquery-3.1.1.min.js"></script>
-    <script src="assets/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
-    <script src="assets/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
-    <script src="assets/lib/chartjs-2.3.0/Chart.js"></script>
+    <?php
+		include_once("assets/common/inc/scripts.php");
+	?>
 
     <script>
         var ctx = document.getElementById("myChart");

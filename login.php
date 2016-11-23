@@ -3,15 +3,9 @@
 	$visitorIP = $customClass->getUserIP();
 	$customClass->makeLog();
 
-	ob_start();
-	session_start();
-
-	$jsondata = file_get_contents("http://10.32.13.28:8080/customers");
-	$json = json_decode($jsondata, true);
-
 	// it will never let you open index(login) page if session is set
 	if ( isset($_SESSION['user'])!="" ) {
-		header("Location: home.php");
+		header("Location: index.php");
 		exit;
 	}
 
@@ -22,7 +16,7 @@
 
 	if( isset($_POST['btn-login']) ) {
 
-		// prevent sql injections/ clear user invalid inputs
+		// prevent injections/ clear user invalid inputs
 		$user = trim($_POST['user']);
 		$user = strip_tags($user);
 		$user = htmlspecialchars($user);
@@ -30,7 +24,7 @@
 		$pass = trim($_POST['password']);
 		$pass = strip_tags($pass);
 		$pass = htmlspecialchars($pass);
-		// prevent sql injections / clear user invalid inputs
+		// prevent injections / clear user invalid inputs
 
 		if(empty($user)){
 			$error = true;
@@ -45,6 +39,8 @@
 		// if there's no error, continue to login
 		if (!$error) {
 
+			$userCheck = $satan->getUsers();
+
 			function validateIdentification($data, $array) {
 				foreach ($array as $key => $val) {
 					if ($val['foedselsnummer'] === $data) {
@@ -54,14 +50,14 @@
 				return null;
 			}
 
-			$result = validateIdentification($user, $json);
+			$result = validateIdentification($user, $userCheck);
 
 			if(!empty($result)){
 				$_SESSION['user'] = $result;
 				header("Location: index.php");
 			}
 			else {
-				$errMSG = "Brukerkontoen er enten tastet inn feil eller finnes ikke.";
+				$errorMessage = "Brukerkontoen er enten tastet inn feil eller finnes ikke.";
 			}
 
 			/*$password = hash('md5', $pass); // password hashing using SHA256*/
@@ -80,11 +76,11 @@
 				<form method="post" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
 
 					<?php
-						if (isset($errMSG)) {
+						if (isset($errorMessage)) {
 					?>
 					<div class="form-group">
 						<div class="alert alert-danger">
-							<span class="glyphicon glyphicon-info-sign"></span> <?=$errMSG?>
+							<b>Feilmelding!</b> <?=$errorMessage?>
 						</div>
 					</div>
 					<?php
@@ -111,10 +107,9 @@
 </div><!-- /jumbotron -->
 
 <!-- Import JavaScript -->
-<script src="assets/lib/jquery-3.1.1/jquery-3.1.1.min.js"></script>
-<script src="assets/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
-<script src="assets/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
-<script src="assets/lib/chartjs-2.3.0/Chart.js"></script>
+<?php
+	include_once("assets/common/inc/scripts.php");
+?>
 
 </body>
 </html>

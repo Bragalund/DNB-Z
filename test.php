@@ -1,84 +1,119 @@
 <?php
-//    require_once("global/config.php");
-//    $visitorIP = $customClass->getUserIP();
-//    $customClass->makeLog();
+    require_once("global/config.php");
+    $visitorIP = $customClass->getUserIP();
+    $customClass->makeLog();
+
+	ob_start();
+	session_start();
+
+	// if session is not set this will redirect to login page
+	if( !isset($_SESSION['user']) ) {
+		header("Location: login.php");
+	exit;
+	}
+
+	require_once("assets/common/inc/head.php");
+	require_once("assets/common/inc/header.php");
+	require_once("assets/common/inc/navbar.php");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Gruppe 15">
 
-    <title><?=$conf['sitename']?></title>
+    <div class="container">
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Warning!</h4>
+            <p>Better check yourself, you're not looking too good.</p>
+        </div>
 
-    <!-- Import stylesheets -->
-    <link href="assets/common/css/stylesheet.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="row valign">
-                <div class="col-md-2 col-sm-3 col-xs-4">
-                    <img src="assets/common/img/logo-z.png" class="img-responsive brand">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Saldo på brukskonto</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <h1>1000,-</h1>
+                    </div>
                 </div>
+            </div>
 
-                <div class="col-md-3 col-sm-4 col-sm-offset-5 col-md-offset-7 hidden-xs">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Saldo på brukskonto</h3>
-                        </div>
-                        <div class="panel-body text-center">
-                            <h1>1000,-</h1>
-                        </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Saldo på brukskonto</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <h1>1000,-</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Saldo på brukskonto</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <h1>1000,-</h1>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <?php
-        require_once("assets/common/inc/navbar.php");
-    ?>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mål</h3>
+                    </div>
+                    <div class="panel-body">
 
-    <div class="container">
+                        <?php
+							$users = $satan->getUsers();
+                            echo "<ul>";
+                            foreach($users as $row) {
+                                echo "<li>".$row['firstName']."</li>";
+                            }
+                            echo "</ul>";
+                        ?>
 
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-4">
-				<form action="" method="post">
-					<div class="form-group">
-					  <label for="user">Personnummer</label>
-					  <input type="text" class="form-control" id="user" placeholder="Ditt personnummer.">
-					</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-					<div class="form-group">
-					  <label for="password">Passord</label>
-					  <input type="password" class="form-control" id="password" placeholder="Ditt passord.">
-					</div>
+                        <p><canvas id="myChart" width="400" height="400"></canvas></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default bg-vipps text-white">
+                    <div class="panel-body">
+                        <p><img src="assets/common/img/vipps-logo.png" class="img-responsive" style="padding:0 50px;"></p>
+                        <form>
+                            <div class="form-group">
+                              <label for="tlf">Telefonnummer</label>
+                              <input type="number" class="form-control" id="tlf" placeholder="Eks.: 543 45 321" required="">
+                            </div>
 
-					<div class="form-group">
-						<button class="btn btn-primary" type="submit">Logg inn</button>
-					</div>
-				</form>
-			</div>
-		</div>
+                            <div class="form-group">
+                              <label for="sum">Beløp</label>
+                              <input type="number" class="form-control" id="sum" placeholder="Eks.: 100" required="">
+                            </div>
+
+                            <button type="submit" name="button" class="btn btn-default">Vipps!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <hr>
 
-        <footer>
-            <p>&copy; PJ3100 Gruppe 15 - høsten 2016, vår 2017<br>
-            <?=$visitorIP?></p>
-        </footer>
+        <?php
+			include_once("assets/common/inc/footer.php");
+		?>
     </div><!-- /container -->
 
-
-    <!-- Import JavaScript -->
-    <script src="assets/lib/jquery-3.1.1/jquery-3.1.1.min.js"></script>
-    <script src="assets/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
-    <script src="assets/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
-    <script src="assets/lib/chartjs-2.3.0/Chart.js"></script>
+    <?php
+		include_once("assets/common/inc/scripts.php");
+	?>
 
     <script>
         var ctx = document.getElementById("myChart");
