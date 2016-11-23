@@ -541,11 +541,11 @@ a.list-group-item:focus {
   * Base structure
   */
 
- #error body {
+/** #error body, #error html{
    height: 100%;
    background-color: #007272;
    text-align: center;
- }
+ }**/
 
  /* Extra markup and styles for table-esque vertical and horizontal centering */
  #error .site-wrapper {
@@ -566,6 +566,8 @@ a.list-group-item:focus {
  /* Padding for spacing */
  #error .inner {
    padding: 30px;
+   margin: auto;
+   text-align: center;
  }
  /*
   * Cover
@@ -578,4 +580,8 @@ a.list-group-item:focus {
 #error h1, #error p, #error h3 {
   color: #ffffff;
   text-align: center;
+}
+
+#error a{
+	color: #000000 !important;
 }
