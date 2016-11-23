@@ -14,21 +14,18 @@ $message = $codes[$_GET["type"]][2];
 }**/
 
 ?>
-<body id="error">
+<body id="error" class="bg-vipps">
 	<div class="site-wrapper">
 		<div class="site-wrapper-inner">
 			<div class="cover-container">
 				<div class="inner cover">
 					<h1 class="cover-heading"><?php echo $code ?></h1>
-					<?php
-					echo 'Hello ' . htmlspecialchars($_GET["name"]) . '!';
-					?>
 					<h3><?php echo $title ?></h3>
 					<p class="lead">
 						<?php echo $message ?>
 					</p>
 					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default"><a href="index.php">Tilbake til forsiden</a></button>
+						<button type="button" class="btn btn-default"><a href="index.php" class="btn-error">Tilbake til forsiden</a></button>
 					</div>
 				</div>
 			</div>
