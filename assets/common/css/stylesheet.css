@@ -40,6 +40,11 @@ header {
 		text-align: left !important;
 	}
 
+	.stacktable {
+		border-bottom: 1px solid #428bca;
+		margin-bottom: 0;
+	}
+
 }
 
 .dropdown:hover .dropdown-menu {
