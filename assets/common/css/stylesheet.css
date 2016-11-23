@@ -36,13 +36,10 @@ header {
         padding-top: 15px;
     }
 
-	.text-xs-left {
+	.text-xs-left, td {
 		text-align: left !important;
 	}
 
-	.text-xs-right {
-		text-align: right !important;
-	}
 }
 
 .dropdown:hover .dropdown-menu {

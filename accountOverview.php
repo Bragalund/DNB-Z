@@ -32,7 +32,7 @@ require_once("assets/common/inc/navbar.php");
 						<td>Citona Marie Rygg</td>
 						<td>1092.06.82408</td>
 						<td>1.000.000,-</td>
-						<td class="text-right text-cs-left">
+						<td class="text-right text-xs-left">
 							<div class="btn-group">
 								<button type="button" class="btn btn-primary">Betale</button>
 								<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +52,7 @@ require_once("assets/common/inc/navbar.php");
 						<td>Mathias Tollerud</td>
 						<td>1662.02.83672</td>
 						<td>1000,-</td>
-						<td class="text-right text-cs-left">
+						<td class="text-right text-xs-left">
 							<div class="btn-group">
 								<button type="button" class="btn btn-primary">Betale</button>
 								<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,7 +72,7 @@ require_once("assets/common/inc/navbar.php");
 						<td>Malin Glosli Haugan</td>
 						<td>1422.05.92538</td>
 						<td>-100,-</td>
-						<td class="text-right text-cs-left">
+						<td class="text-right text-xs-left">
 							<div class="btn-group">
 								<button type="button" class="btn btn-primary">Betale</button>
 								<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
