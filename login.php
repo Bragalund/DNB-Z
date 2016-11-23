@@ -100,6 +100,12 @@
 	</div><!-- /container -->
 </div><!-- /jumbotron -->
 
+<div class="container">
+	<?php
+		include_once("assets/common/inc/footer.php");
+	?>
+</div>
+
 <!-- Import JavaScript -->
 <?php
 	include_once("assets/common/inc/scripts.php");
