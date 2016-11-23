@@ -1,5 +1,10 @@
 <?php
 require_once("assets/common/inc/head.php");
+
+$status = $_SERVER['REDIRECT_STATUS'];
+$codes = array(
+  404 => array('404', 'Page not found', 'The page you were looking for doesnt exist or another error occured.')
+)
 ?>
 <body id="error">
     <div class="site-wrapper">
