@@ -582,6 +582,10 @@ a.list-group-item:focus {
   text-align: center;
 }
 
+#error h1{
+	font-size: 10em;
+}
+
 #error a{
 	color: #000000 !important;
 }
