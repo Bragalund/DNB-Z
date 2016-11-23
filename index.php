@@ -102,9 +102,7 @@
                 </div>
             </div>
         </div>
-
-        <hr>
-
+		
         <?php
 			include_once("assets/common/inc/footer.php");
 		?>
