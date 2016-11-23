@@ -3,10 +3,10 @@ require_once("global/config.php");
 $visitorIP = $customClass->getUserIP();
 $customClass->makeLog();
 
-/*if( !isset($_SESSION['user']) ) {
+if( !isset($_SESSION['user']) ) {
 header("Location: login.php");
 exit;
-}*/
+}
 
 require_once("assets/common/inc/head.php");
 require_once("assets/common/inc/header.php");
@@ -26,6 +26,7 @@ require_once("assets/common/inc/navbar.php");
 							<th>Konto</th>
 							<th>Kontonummer</th>
 							<th>Saldo</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -70,8 +71,6 @@ require_once("assets/common/inc/navbar.php");
 							</td>
 						</tr>
 						<tr>
-
-
 							<td>Malin Glosli Haugan</td>
 							<td>1422.05.92538</td>
 							<td>-100,-</td>
@@ -107,7 +106,7 @@ include_once("assets/common/inc/scripts.php");
 ?>
 
 <script>
-$('table').stacktable();
+$('table').cardtable();
 </script>
 
 </body>
