@@ -1,9 +1,12 @@
 <?php
-class Custom{
+include("Satan.php");
+
+class Custom extends Satan{
 
     private static $instance;
 
     protected $db;
+	protected $satan;
 
     public static function init(){
         if(self::$instance == NULL){
@@ -15,6 +18,7 @@ class Custom{
 
     private function __construct(){
         $this->db = Database::init();
+		$this->satan = Satan::init();
     }
 
     public function getUserIP(){
@@ -37,7 +41,7 @@ class Custom{
 
     public function makeLog(){
         $db = $this->db; // Så slipper du å endre alle $db her til $this->db.
-        //$userID     = logged['id'];
+        //$userID     = $logged['id'];
         $userID     = "NULL";
         $ip         = $this->getUserIP();
         $url        = $db->escape($_SERVER["REQUEST_URI"]);
