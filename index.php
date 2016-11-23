@@ -30,7 +30,7 @@
                         <h3 class="panel-title">Saldo på brukskonto</h3>
                     </div>
                     <div class="panel-body text-center">
-                        <h1>1000,-</h1>
+                        <h1><?=$customClass->makeCurrency(18342)?></h1>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                         <h3 class="panel-title">Saldo på brukskonto</h3>
                     </div>
                     <div class="panel-body text-center">
-                        <h1>1000,-</h1>
+                        <h1><?=$customClass->makeCurrency(153498)?></h1>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <h3 class="panel-title">Saldo på brukskonto</h3>
                     </div>
                     <div class="panel-body text-center">
-                        <h1>1000,-</h1>
+                        <h1><?=$customClass->makeCurrency(1542)?></h1>
                     </div>
                 </div>
             </div>

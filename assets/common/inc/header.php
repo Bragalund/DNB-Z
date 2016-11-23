@@ -5,6 +5,7 @@
                 <img src="assets/common/img/logo-z.png" class="img-responsive brand">
             </div>
 
+			<?php  if(isset($_SESSION['user'])){?>
             <div class="col-md-3 col-sm-4 col-sm-offset-5 col-md-offset-7 hidden-xs">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -15,6 +16,7 @@
                     </div>
                 </div>
             </div>
+			<?php } ?>
         </div>
     </div>
 </header>

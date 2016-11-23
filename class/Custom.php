@@ -62,4 +62,23 @@ class Custom extends Satan{
             `time`='" . $time . "'
         ");
     }
+
+	public function makeCurrency($n) {
+
+		/*
+		 * 	1000
+		 *	10 000
+		 *	100 000
+		 *  1 000 000
+		 *  10 000 000
+		 *	100 000 000
+		 * 	1 000 000 000
+		 */
+
+		return number_format($n, 0,'.', ' ') . ',-';
+
+		//return sprintf('%0.2f', $value) . ",-";
+		//return money_format('%+n', $value) . "\n";
+		//return money_format('%.2n', $value) . "\n";
+	}
 }
