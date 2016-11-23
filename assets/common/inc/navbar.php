@@ -9,8 +9,9 @@ $navRight = array(
 	'Meny 4' => $conf['pages']['menu4']
 );
 ?>
-<div class="container">
-	<nav class="navbar navbar-default navbar-custom" role="navigation">
+
+<nav class="navbar navbar-default navbar-custom" role="navigation">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Meny</span>
@@ -46,5 +47,5 @@ $navRight = array(
 				?>
             </ul>
         </div><!--/.navbar-collapse -->
-    </nav>
-</div>
+    </div>
+</nav>
