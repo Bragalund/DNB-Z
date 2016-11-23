@@ -57,7 +57,7 @@
 				header("Location: index.php");
 			}
 			else {
-				$errorMessage = "Brukerkontoen er enten tastet inn feil eller finnes ikke.";
+				$errorMessage = "Personnummeret og/eller passordet er tastet inn feil eller finnes ikke.";
 			}
 
 			/*$password = hash('md5', $pass); // password hashing using SHA256*/
