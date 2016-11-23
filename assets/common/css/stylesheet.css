@@ -74,14 +74,14 @@ img.brand {
 }
 
 .navbar-custom {
-    background-color: rgba(0, 115, 112, 1);
+    background-color: rgba(0, 114, 114, 1);
     border-width: 0px;
     border-radius: 0px;
 }
 
 .navbar-custom .navbar-nav>li>a {
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 115, 112, 1);
+    background-color: rgba(0, 114, 114, 1);
 }
 
 .navbar-custom .navbar-nav>li>a:hover,
@@ -112,7 +112,7 @@ img.brand {
 
 .navbar-custom .navbar-toggle:hover .icon-bar,
 .navbar-custom .navbar-toggle:focus .icon-bar {
-    background-color: #007370;
+    background-color: #007272;
 }
 
 .navbar-collapse {
