@@ -75,6 +75,6 @@ class Custom extends Satan{
 		 * 	1 000 000 000
 		 */
 
-		return number_format($n, 0,'.', ' ') . ',-';
+		return number_format($n, 2,'.', ' ') . ',-';
 	}
 }
