@@ -76,7 +76,7 @@
 					?>
 					<div class="form-group">
 						<div class="alert alert-danger">
-							<b>Feilmelding!</b> <?=$errorMessage?>
+							<?=$errorMessage?>
 						</div>
 					</div>
 					<?php

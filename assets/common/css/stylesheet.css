@@ -119,6 +119,11 @@ img.brand {
     padding: 0 15px 0 0;
 }
 
+.alert-danger {
+	background-color: #f6ecec;
+	border-color: #b43e3b;
+}
+
 .panel {
 	border: 1px solid #eaeef1;
 	border-radius: 4px;
@@ -356,6 +361,10 @@ a.list-group-item:focus {
 
 .text-red {
 	color: #f56954 !important;
+}
+
+.text-brightred {
+	color: #ff4136 !important;
 }
 
 .text-yellow {
