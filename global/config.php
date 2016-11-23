@@ -37,3 +37,6 @@ $customClass = Custom::init();
 $satan = Satan::init();
 
 $conf['sitename'] = "DNB Z";
+
+$visitorIP = $customClass->getUserIP();
+$customClass->makeLog();

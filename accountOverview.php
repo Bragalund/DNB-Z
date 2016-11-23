@@ -1,7 +1,5 @@
 <?php
 require_once("global/config.php");
-$visitorIP = $customClass->getUserIP();
-$customClass->makeLog();
 
 if( !isset($_SESSION['user']) ) {
 header("Location: login.php");

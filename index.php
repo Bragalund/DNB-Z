@@ -1,12 +1,10 @@
 <?php
     require_once("global/config.php");
-    $visitorIP = $customClass->getUserIP();
-    $customClass->makeLog();
 
 	// if session is not set this will redirect to login page
 	if( !isset($_SESSION['user']) ) {
 		header("Location: login.php");
-	exit;
+		exit;
 	}
 
 	$logged = $satan->getUser($_SESSION['user']);
