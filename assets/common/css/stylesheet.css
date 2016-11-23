@@ -70,6 +70,111 @@ img.brand {
 
 .navbar-custom .navbar-brand {
     color: rgba(255, 255, 255, 1);
+<<<<<<< HEAD
+=======
+}
+
+.navbar-custom {
+    background-color: rgba(0, 114, 114, 1);
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+.navbar-custom .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 114, 114, 1);
+}
+
+.navbar-custom .navbar-nav>li>a:hover,
+.navbar-custom .navbar-nav>li>a:focus {
+    color: rgba(199, 199, 199, 1);
+    background-color: rgba(0, 92, 90, 1);
+}
+
+.navbar-custom .navbar-nav>.active>a,
+.navbar-custom .navbar-nav>.active>a:hover,
+.navbar-custom .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 92, 90, 1);
+}
+
+.navbar-custom .navbar-toggle {
+    border-color: #005c5a;
+}
+
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #005c5a;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #005c5a;
+}
+
+.navbar-custom .navbar-toggle:hover .icon-bar,
+.navbar-custom .navbar-toggle:focus .icon-bar {
+    background-color: #007272;
+}
+
+.navbar-collapse {
+    padding: 0 15px 0 0;
+}
+
+.panel {
+	border: 1px solid #eaeef1;
+	border-radius: 4px;
+}
+
+.panel-heading {
+	background-color: #f9fafc;
+	font-weight: 600;
+	border-bottom: 1px solid #eaeef1;
+}
+
+.panel-heading.no-border {
+	margin: -1px -1px 0 -1px;
+	border: none;
+}
+
+.panel-body {
+	padding: 20px 15px;
+}
+
+.panel-form > div > div > [class^="col-"]:first-child,
+.panel-form > div > div > [class*=" col-"]:first-child,
+.panel-form > div > [class^="col-"]:first-child,
+.panel-form > div > [class*=" col-"]:first-child {
+	padding-top: 25px;
+}
+
+.panel-footer {
+	border-color: #eaeef1;
+	border-radius: 0 0 2px 2px;
+	background-color: #f9fafc;
+}
+
+.list-group-item {
+	border-color: #eaeef1;
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus {
+	background-color: #f9fafc;
+}
+
+.panel-primary {
+	border-color:#428bca;
+}
+
+.panel-primary>.panel-heading {
+	color:#fff;
+	background-color:#428bca;
+	border-color:#428bca;
+}
+
+.panel-primary>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color:#428bca;
+>>>>>>> parent of 696ea6e... Theme test
 }
 
 .navbar-custom {

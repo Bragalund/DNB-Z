@@ -10,7 +10,10 @@
     <title><?=$conf['sitename']?></title>
 
     <!-- Import stylesheets -->
+<<<<<<< HEAD
 	<link href="http://bootswatch.com/lumen/bootstrap.css" rel="stylesheet">
+=======
+>>>>>>> parent of 696ea6e... Theme test
     <link href="assets/common/css/stylesheet.css" rel="stylesheet">
 </head>
 <body>
