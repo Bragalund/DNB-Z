@@ -69,51 +69,7 @@ img.brand {
     height: 60px;
 }
 
-.navbar-custom .navbar-brand {
-    color: rgba(255, 255, 255, 1);
-}
 
-.navbar-custom {
-    background-color: rgba(0, 114, 114, 1);
-    border-width: 0px;
-    border-radius: 0px;
-}
-
-.navbar-custom .navbar-nav>li>a {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 114, 114, 1);
-}
-
-.navbar-custom .navbar-nav>li>a:hover,
-.navbar-custom .navbar-nav>li>a:focus {
-    color: rgba(199, 199, 199, 1);
-    background-color: rgba(0, 92, 90, 1);
-}
-
-.navbar-custom .navbar-nav>.active>a,
-.navbar-custom .navbar-nav>.active>a:hover,
-.navbar-custom .navbar-nav>.active>a:focus {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 92, 90, 1);
-}
-
-.navbar-custom .navbar-toggle {
-    border-color: #005c5a;
-}
-
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
-    background-color: #005c5a;
-}
-
-.navbar-custom .navbar-toggle .icon-bar {
-    background-color: #005c5a;
-}
-
-.navbar-custom .navbar-toggle:hover .icon-bar,
-.navbar-custom .navbar-toggle:focus .icon-bar {
-    background-color: #007272;
-}
 
 .navbar-collapse {
     padding: 0 15px 0 0;
