@@ -3,3 +3,4 @@
 <script src="assets/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
 <script src="assets/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
 <script src="assets/lib/chartjs-2.3.0/Chart.js"></script>
+<script src="assets/lib/stackable-1.0.1/js/libs/jquery-1.7.min.js"></script>
