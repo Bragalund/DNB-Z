@@ -16,6 +16,14 @@ class Satan{
 
     }
 
+	/**
+ 	 * Method for getting data from server and convert to array.
+ 	 *
+	 * @type must be a valid type.
+ 	 * @identification must be an user or account.
+ 	 * @return the data as array.
+	 */
+
 	private function getData($type, $identification){
 		if(!empty($identification)){
 			$data = self::$server . $type . '/' . $identification;
@@ -30,16 +38,68 @@ class Satan{
 		return $data;
 	}
 
+	/**
+ 	 * Get all users.
+ 	 *
+ 	 * @return all users.
+	 */
+
 	public function getUsers(){
 		$data = $this->getData("customers", NULL);
 
 		return $data;
 	}
 
+	/**
+ 	 * Get information about one user.
+ 	 *
+ 	 * @identification must be an valid user.
+ 	 * @return information about user.
+	 */
+
 	public function getUser($identification){
 		$data = $this->getData("customers", $identification);
 
 		//if contains user not found return error.
+
+		return $data;
+	}
+
+	/**
+ 	 * Get accounts for one user.
+ 	 *
+ 	 * @identification must be an valid user.
+ 	 * @return users accounts.
+	 */
+
+	public function getAccounts($identification){
+		$data = $this->getData("accounts", $identification);
+
+		return $data;
+	}
+
+	/**
+ 	 * Get information about account.
+ 	 *
+ 	 * @identification must be an account number.
+ 	 * @return information about account.
+	 */
+
+	public function getAccount($identification){
+		$data = $this->getData("account", $identification);
+
+		return $data;
+	}
+
+	/**
+ 	 * Get account balance. Identification must be an account.
+ 	 *
+ 	 * @identification must be an account number.
+ 	 * @return account balance.
+	 */
+
+	public function getBalance($identification){
+		$data = $this->getData("balance", $identification);
 
 		return $data;
 	}
