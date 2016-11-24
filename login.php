@@ -39,8 +39,8 @@
 
 			function validateIdentification($data, $array) {
 				foreach ($array as $key => $val) {
-					if ($val['foedselsnummer'] === $data) {
-						return $val['foedselsnummer'];
+					if ($val['birthdayNumber'] === $data) {
+						return $val['birthdayNumber'];
 					}
 				}
 				return null;
@@ -48,9 +48,17 @@
 
 			$result = validateIdentification($user, $userCheck);
 
+			$userPass = $satan->getPassword($result);
+			$password = hash('md5', $pass);
+
 			if(!empty($result)){
-				$_SESSION['user'] = $result;
-				header("Location: index.php");
+				if($userPass[0] == $password){
+					$_SESSION['user'] = $result;
+					header("Location: index.php");
+				}
+				else {
+					$errorMessage = "Personnummeret og/eller passordet er tastet inn feil eller finnes ikke.";
+				}
 			}
 			else {
 				$errorMessage = "Personnummeret og/eller passordet er tastet inn feil eller finnes ikke.";
@@ -68,6 +76,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-4">
+				<?=$satan->getPassword("29039637688")[0];?>
+				<?=hash('md5', "HejhoPp26");?>
+
 				<h2 class="text-center text-white">Logg inn i nettbanken</h2>
 				<form method="post" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
 

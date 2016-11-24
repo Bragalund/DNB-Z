@@ -2,7 +2,7 @@
 class Satan{
 
     private static $instance;
-	private static $server = "http://188.166.68.117:8080/";
+	private static $server = "http://localhost:8080/";
 
     public static function init(){
         if(self::$instance == NULL){
@@ -26,16 +26,22 @@ class Satan{
 
 	private function getData($type, $identification){
 		if(!empty($identification)){
-			$data = self::$server . $type . '/' . $identification;
+			$data = self::$server . 'user/' . $identification . '/' . $type;
 		}
 		else {
 			$data = self::$server . $type;
 		}
 
-		$data = file_get_contents($data);
-		$data = json_decode($data, true);
+		$data = @file_get_contents($data);
+		if($data === FALSE){
+			$error = true;
+			return $error;
+		}
+		else {
+			$data = json_decode($data, true);
 
-		return $data;
+			return $data;
+		}
 	}
 
 	/**
@@ -45,7 +51,7 @@ class Satan{
 	 */
 
 	public function getUsers(){
-		$data = $this->getData("customers", NULL);
+		$data = $this->getData(NULL, "all");
 
 		return $data;
 	}
@@ -58,7 +64,7 @@ class Satan{
 	 */
 
 	public function getUser($identification){
-		$data = $this->getData("customers", $identification);
+		$data = $this->getData(NULL, $identification);
 
 		//if contains user not found return error.
 
@@ -73,7 +79,7 @@ class Satan{
 	 */
 
 	public function getAccounts($identification){
-		$data = $this->getData("accounts", $identification);
+		$data = $this->getData("account/all", $identification);
 
 		return $data;
 	}
@@ -100,6 +106,12 @@ class Satan{
 
 	public function getBalance($identification){
 		$data = $this->getData("balance", $identification);
+
+		return $data;
+	}
+
+	public function getPassword($identification){
+		$data = $this->getData("auth", $identification);
 
 		return $data;
 	}
