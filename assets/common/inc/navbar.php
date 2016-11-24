@@ -9,7 +9,7 @@ $navRight = array(
 	'Meny 4' => $conf['pages']['menu4']
 );
 
-$menuMain = array(
+/*$menuMain = array(
 	'1'=> 'Konto'
 );
 
@@ -17,7 +17,7 @@ $subMenu = array(
 
 );
 
-foreach, if så foreach
+foreach, if så foreach*/
 ?>
 
 <nav class="navbar navbar-default navbar-custom" role="navigation">
