@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row valign">
             <div class="col-md-2 col-sm-3 col-xs-4">
-                <img src="assets/common/img/logo.png" class="img-responsive brand">
+                <a href="../../../index.php"><img src="assets/common/img/logo.png" class="img-responsive brand"></a>
             </div>
 
 			<?php if(isset($_SESSION['user'])){?>
