@@ -1,6 +1,6 @@
 <?php
 $navLeft = array(
-	'Meny 1' => $conf['pages']['menu1'],
+	'Konto' => $conf['pages']['accountOverview'],
 	'Meny 2' => $conf['pages']['menu2']
 );
 

@@ -14,10 +14,8 @@ require_once("assets/common/inc/navbar.php");
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="panel panel-default panel-primary">
-				<div class="panel-heading">
-					<h4>Kontooversikt</h4>
-				</div>
+			<h1>Kontooversikt</h1>
+			<div class="panel panel-default">
 				<table class="table table-striped">
 					<thead>
 						<tr>
