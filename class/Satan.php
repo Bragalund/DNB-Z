@@ -66,8 +66,6 @@ class Satan{
 	public function getUser($identification){
 		$data = $this->getData(NULL, $identification);
 
-		//if contains user not found return error.
-
 		return $data;
 	}
 
@@ -109,6 +107,13 @@ class Satan{
 
 		return $data;
 	}
+
+	/**
+ 	 * Get account password.
+ 	 *
+ 	 * @identification must be an account number.
+ 	 * @return password in array.
+	 */
 
 	public function getPassword($identification){
 		$data = $this->getData("auth", $identification);
