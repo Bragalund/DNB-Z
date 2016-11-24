@@ -103,7 +103,7 @@
 						<input type="password" class="form-control" id="password" name="password" placeholder="Skriv inn passord.">
 					</div>
 					<div class="form-group">
-						<button class="btn btn-primary" type="submit" name="btn-login">Logg inn</button>
+						<button class="btn btn-default" type="submit" name="btn-login">Logg inn</button>
 					</div>
 				</form><!-- /form -->
 			</div>

@@ -5,7 +5,7 @@ if(!defined("CONFIG")){
 }
 
 $conf['pages']['homepage'] = "index.php";
-$conf['pages']['menu1'] = "menu1.php";
+$conf['pages']['accountOverview'] = "accountOverview.php";
 $conf['pages']['menu2'] = "menu2.php";
 $conf['pages']['menu3'] = "menu3.php";
 $conf['pages']['menu4'] = "menu4.php";

@@ -1,6 +1,6 @@
 <?php
 $navLeft = array(
-	'Meny 1' => $conf['pages']['menu1'],
+	'Konto' => $conf['pages']['accountOverview'],
 	'Meny 2' => $conf['pages']['menu2']
 );
 
@@ -8,6 +8,16 @@ $navRight = array(
 	'Meny 3' => $conf['pages']['menu3'],
 	'Meny 4' => $conf['pages']['menu4']
 );
+
+/*$menuMain = array(
+	'1'=> 'Konto'
+);
+
+$subMenu = array(
+
+);
+
+foreach, if så foreach*/
 ?>
 
 <nav class="navbar navbar-default navbar-custom" role="navigation">
