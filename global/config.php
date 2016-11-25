@@ -31,10 +31,11 @@ require_once ('class/Mysqli.php');
 require_once ('class/Custom.php');
 require_once ('class/Satan.php');
 require_once ('opendb.php');
-require_once ('pages.php');
 
 $customClass = Custom::init();
 $satan = Satan::init();
+
+require_once ('pages.php');
 
 $conf['sitename'] = "DNB Z";
 
