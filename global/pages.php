@@ -12,7 +12,7 @@ $menu = [
 			'sub' => NULL
 		],
 		2 => [
-			'main' => 'konto',
+			'main' => 'Konto',
 			'url' => 'accountOverview.php',
 			'sub' => [
 				1 => [
@@ -38,7 +38,7 @@ $menu = [
 			]
 		],
 		3 => [
-			'main' => 'betaling',
+			'main' => 'Betaling',
 			'url' => 'payment.php',
 			'sub' => [
 				1 => [
