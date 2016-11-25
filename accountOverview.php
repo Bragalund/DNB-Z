@@ -27,9 +27,9 @@ require_once("assets/common/inc/navbar.php");
 					</thead>
 					<tbody>
 						<tr>
-							<td>Citona Marie Rygg</td>
+							<td>Brukskonto</td>
 							<td>1092.06.82408</td>
-							<td>1.000.000,-</td>
+							<td>10 000,-</td>
 							<td class="text-right text-xs-left">
 								<div class="btn-group">
 									<button type="button" class="btn btn-primary">Betale</button>
@@ -47,7 +47,7 @@ require_once("assets/common/inc/navbar.php");
 							</td>
 						</tr>
 						<tr>
-							<td>Mathias Tollerud</td>
+							<td>Regninger</td>
 							<td>1662.02.83672</td>
 							<td>1000,-</td>
 							<td class="text-right text-xs-left">
@@ -67,9 +67,9 @@ require_once("assets/common/inc/navbar.php");
 							</td>
 						</tr>
 						<tr>
-							<td>Malin Glosli Haugan</td>
+							<td>Sparekonto</td>
 							<td>1422.05.92538</td>
-							<td>-100,-</td>
+							<td>100 000,-</td>
 							<td class="text-right text-xs-left">
 								<div class="btn-group">
 									<button type="button" class="btn btn-primary">Betale</button>
