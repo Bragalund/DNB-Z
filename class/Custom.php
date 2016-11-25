@@ -63,7 +63,7 @@ class Custom extends Satan{
         ");
     }
 
-	public function makeCurrency($n) {
+	public function makeCurrency($kr, $oere) {
 
 		/*
 		 * 	1000
@@ -75,6 +75,13 @@ class Custom extends Satan{
 		 * 	1 000 000 000
 		 */
 
-		return number_format($n, 2,'.', ' ') . ',-';
+		if(!empty($oere)){
+			return number_format($kr, 0,'.', ' ') . '.' . $oere . ',-';
+		}
+		else {
+			return number_format($kr, 2,'.', ' ') . ',-';
+		}
+
+
 	}
 }

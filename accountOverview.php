@@ -2,9 +2,11 @@
 require_once("global/config.php");
 
 if( !isset($_SESSION['user']) ) {
-header("Location: login.php");
-exit;
+	header("Location: login.php");
+	exit;
 }
+
+$logged['id'] = $_SESSION['user'];
 
 require_once("assets/common/inc/head.php");
 require_once("assets/common/inc/header.php");
@@ -26,7 +28,12 @@ require_once("assets/common/inc/navbar.php");
 						</tr>
 					</thead>
 					<tbody>
+						<?php
+							$result = $satan->getAccounts($logged['id']);
+							foreach($result as $row) {
+						?>
 						<tr>
+<<<<<<< HEAD
 							<td>Brukskonto</td>
 							<td>1092.06.82408</td>
 							<td>10 000,-</td>
@@ -70,6 +77,11 @@ require_once("assets/common/inc/navbar.php");
 							<td>Sparekonto</td>
 							<td>1422.05.92538</td>
 							<td>100 000,-</td>
+=======
+							<td><?=$row['accountType']?></td>
+							<td><?=$row['accountNumber']?></td>
+							<td><?=$customClass->makeCurrency($row['kroner'], $row['oere'])?></td>
+>>>>>>> 273d1acdb5d57c860aef952802f9199d339f036a
 							<td class="text-right text-xs-left">
 								<div class="btn-group">
 									<button type="button" class="btn btn-primary">Betale</button>
@@ -86,6 +98,7 @@ require_once("assets/common/inc/navbar.php");
 								</div>
 							</td>
 						</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			</div><!-- /panel -->

@@ -12,7 +12,7 @@
                         <h3 class="panel-title">Saldo på brukskonto</h3>
                     </div>
                     <div class="panel-body text-center">
-                        <h1><?=$customClass->makeCurrency(18342)?></h1>
+                        <h1><?=$customClass->makeCurrency(18342, NULL)?></h1>
                     </div>
                 </div>
             </div>
