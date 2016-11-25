@@ -154,6 +154,9 @@ $menu = [
 
 echo $menu['left'][1]['main'];
 
+foreach ($menu['left'][1] as $nav) {
+	echo '<li>'$nav'</li>';
+}
 /*foreach, if så foreach*/
 ?>
 
@@ -170,9 +173,20 @@ echo $menu['left'][1]['main'];
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
                 <?php
-    				foreach($navLeft as $nav_title => $nav_link){
+    				/**foreach($navLeft as $nav_title => $nav_link){
     					echo '<li class="'.($nav_link == basename($_SERVER['PHP_SELF']) ? 'active':'').'"><a href="'.$conf['pathToRoot'].''.$nav_link.'">'.$nav_title.'</a></li>';
-    				}
+    				}**/
+					/**foreach ($menu['left'] as $parent){
+						echo '<li><a href="'$parent['url']'">'$parent['main']'</a></li>';
+
+						if(is_array($parent))[
+							echo '<ul class="dropdown-menu">';
+							foreach ($parent as $children) {
+								echo '<li><a></a></li>';
+							};
+							echo '</ul>';
+						]
+					};**/
 				?>
             </ul>
 
