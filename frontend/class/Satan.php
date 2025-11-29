@@ -2,17 +2,12 @@
 class Satan{
 
     private static $instance;
-	private static $server;
+	private static $server = "http://localhost:8080/";
 
     public static function init(){
         if(self::$instance == NULL){
             $className = __CLASS__;
             self::$instance = new $className();
-			$url = getenv('BACKEND_URL');
-			if(empty($url)){
-				$url = "http://localhost:8080";
-			}
-			self::$server = rtrim($url, "/") . "/";
         }
         return self::$instance;
     }

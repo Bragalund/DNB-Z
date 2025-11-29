@@ -12,7 +12,6 @@
             <ul class="nav navbar-nav navbar-left">
 				<?php
 					$alignment = 'left';
-					if (isset($menu[$alignment]) && is_array($menu[$alignment])) {
 					for ($i=1; $i<count($menu[$alignment])+1; $i++) {
 						if ($menu['left'][$i]['sub'] != NULL) {
 							echo ('<li class="dropdown '.($menu[$alignment][$i]['url'] == basename($_SERVER['PHP_SELF']) ? 'active':'').'">');
@@ -27,7 +26,6 @@
 						else {
 							echo ('<li class="'.($menu[$alignment][$i]['url'] == basename($_SERVER['PHP_SELF']) ? 'active':'').'"><a href="' . $menu[$alignment][$i]['url'] . '">' . $menu[$alignment][$i]['main'] . '</a></li>');
 						}
-					}
 					}
 				?>
             </ul>
@@ -35,7 +33,6 @@
             <ul class="nav navbar-nav navbar-right">
 				<?php
 					$alignment = 'right';
-					if (isset($menu[$alignment]) && is_array($menu[$alignment])) {
 					for ($i=1; $i<count($menu[$alignment])+1; $i++) {
 						if ($menu['left'][$i]['sub'] != NULL) {
 							echo ('<li class="dropdown '.($menu[$alignment][$i]['url'] == basename($_SERVER['PHP_SELF']) ? 'active':'').'">');
@@ -50,7 +47,6 @@
 						else {
 							echo ('<li class="'.($menu[$alignment][$i]['url'] == basename($_SERVER['PHP_SELF']) ? 'active':'').'"><a href="' . $menu[$alignment][$i]['url'] . '">' . $menu[$alignment][$i]['main'] . '</a></li>');
 						}
-					}
 					}
 				?>
             </ul>

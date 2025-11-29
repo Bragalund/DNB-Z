@@ -11,10 +11,10 @@ if(!defined("CONFIG")){
 // Here is the connection information.
 
 if(class_exists("Database")){
-	$dbhost = getenv('DB_HOST') ?: 'localhost';
-	$dbuser = getenv('DB_USER') ?: 'dnb_user';
-	$dbpass = getenv('DB_PASSWORD') ?: 'dnb_pass';
-	$dbname = getenv('DB_NAME') ?: 'dnb_z';
+	$dbhost = 'tek.westerdals.no';
+	$dbuser = 'tolmat15_front';
+	$dbpass = 'OeE).C^0QR[I';
+	$dbname = 'tolmat15_front';
 
 	$db = Database::init();
 	$db->connect($dbhost, $dbuser, $dbpass, $dbname, '', 'assoc', $conf['localhost']);

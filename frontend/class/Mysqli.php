@@ -17,7 +17,6 @@ if(!defined('CONFIG')){
 class Database{
 
 	private $host, $user, $pass, $name, $prefix, $type, $listing;
-	private $_connection;
 	public static $settings = array('utf8' => false);
 	private static $availableTypes = array(
 		'object',
