@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row valign">
             <div class="col-md-2 col-sm-3 col-xs-4">
-                <a href="<?=$conf['pathToRoot']?>"><img src="assets/common/img/logo.png" class="img-responsive brand"></a>
+                <a href="<?=$conf['pathToRoot']?>"><img src="assets/common/img/bankers.svg" class="img-responsive brand" alt="Bankers"></a>
             </div>
 
 			<?php if(isset($_SESSION['user'])){?>

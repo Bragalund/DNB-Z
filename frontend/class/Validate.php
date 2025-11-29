@@ -33,7 +33,11 @@ class Validate{
 		return ($this->isUtf8($str) && $force == false) ? $str : utf8_encode($str);
 	}
 	public function decode($str, $force = false){
-		return ($this->isUtf8($str) && $force == false) ? $str : utf8_decode($str);
+		if($this->isUtf8($str) && $force == false) return $str;
+		if(function_exists('mb_convert_encoding')){
+			return mb_convert_encoding($str, 'ISO-8859-1', 'UTF-8');
+		}
+		return utf8_decode($str);
 	}
 	public function isUtf8($string){
 		if (preg_match('!!u', $string)) return true;

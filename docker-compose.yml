@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backend/DNB-Z-backend/Testdata_til_Database/DBcreationScript.sql:/docker-entrypoint-initdb.d/01-init.sql
+    ports:
+      - "3306:3306"
+
+  backend:
+    build:
+      context: ./backend/DNB-Z-backend
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      BACKEND_URL: ${COMPOSE_BACKEND_URL:-http://backend:8080}
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    depends_on:
+      - backend
+      - mysql
+    ports:
+      - "8081:80"
+
+volumes:
+  db_data:

@@ -51,16 +51,20 @@ class Custom extends Satan{
         $referer    = $db->escape((isset($_SEVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER'] : null));
         $time       = time();
 
-        $db->query("INSERT INTO `log` SET
-            `userID`='" . $userID . "',
-            `ip`='" . $ip . "',
-            `url`='" . $url . "',
-            `browser`='" . $browser . "',
-            `protocol`='" . $protocol . "',
-            `method`='" . $method . "',
-            `referer`='" . $referer . "',
-            `time`='" . $time . "'
-        ");
+        try{
+            $db->query("INSERT INTO `log` SET
+                `userID`='" . $userID . "',
+                `ip`='" . $ip . "',
+                `url`='" . $url . "',
+                `browser`='" . $browser . "',
+                `protocol`='" . $protocol . "',
+                `method`='" . $method . "',
+                `referer`='" . $referer . "',
+                `time`='" . $time . "'
+            ");
+        } catch (\Exception $e) {
+            // Ignore logging failures (e.g., table not present) to keep the app running.
+        }
     }
 
 	public function makeCurrency($kr, $oere) {

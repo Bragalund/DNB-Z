@@ -20,11 +20,12 @@ public class DBConnector {
      */
     public static ConnectionSource makeConnection() {
 
-        //Hardcoded usernames and passwords is used because of lack of time. This is the worst security EVER, but it works...
-        //Should have used a propertiesfile...
-        String userName = "daheva15_MainUsr";
-        String password = "PJ3100gruppe15!";
-        String databaseUrl = "jdbc:mysql://tek.westerdals.no:3306/daheva15_PJ3100_gruppe15";
+        String userName = getEnvOrDefault("DB_USER", "dnb_user");
+        String password = getEnvOrDefault("DB_PASSWORD", "dnb_pass");
+        String host = getEnvOrDefault("DB_HOST", "localhost");
+        String port = getEnvOrDefault("DB_PORT", "3306");
+        String database = getEnvOrDefault("DB_NAME", "dnb_z");
+        String databaseUrl = "jdbc:mysql://" + host + ":" + port + "/" + database;
 
         return connectToDatabase(userName, password, databaseUrl);
     }
@@ -50,5 +51,13 @@ public class DBConnector {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private static String getEnvOrDefault(String key, String defaultValue) {
+        String value = System.getenv(key);
+        if (value == null || value.trim().isEmpty()) {
+            return defaultValue;
+        }
+        return value.trim();
     }
 }

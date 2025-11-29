@@ -1,0 +1,18 @@
+project_name        = "dnb-z"
+location            = "westeurope"
+plan_sku            = "EP1"
+
+# Set your desired image names/tags (after you push to ACR these should match the repos/tags there)
+backend_image_name  = "dnb-z-backend"
+backend_image_tag   = "latest"
+frontend_image_name = "dnb-z-frontend"
+frontend_image_tag  = "latest"
+
+# Database connectivity
+db_host     = "your-db-host"
+db_port     = "3306"
+db_name     = "dnb_z"
+db_user     = "dnb_user"
+db_password = "dnb_pass"
+
+backend_url = "https://<backend-host-or-function-url>"
